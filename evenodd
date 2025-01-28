@@ -1,0 +1,34 @@
+using System;
+
+public class EvenOdd
+{
+    public int[][] SeparateOddEven(int[] numbers)
+    {
+        // Separate odd and even numbers
+        int[] evenNumbers = Array.FindAll(numbers, num => num % 2 == 0);
+        int[] oddNumbers = Array.FindAll(numbers, num => num % 2 != 0);
+
+        // Store them in a jagged array
+        int[][] jaggedArray = new int[2][];
+        jaggedArray[0] = evenNumbers; // Even numbers
+        jaggedArray[1] = oddNumbers; // Odd numbers
+
+        return jaggedArray;
+    }
+
+    public void DisplayResults(int[][] jaggedArray)
+    {
+        Console.WriteLine("The Even elements are:");
+        foreach (int even in jaggedArray[0])
+        {
+            Console.Write(even + " ");
+        }
+        Console.WriteLine();
+
+        Console.WriteLine("The Odd elements are:");
+        foreach (int odd in jaggedArray[1])
+        {
+            Console.Write(odd + " ");
+        }
+    }
+}
