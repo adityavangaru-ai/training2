@@ -1,0 +1,63 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Input the number of elements
+        Console.Write("Enter the number of elements in the array: ");
+        int n = int.Parse(Console.ReadLine());
+
+        int[] arr = new int[n];
+        Console.WriteLine("Enter the elements of the array:");
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write($"Element {i}: ");
+            arr[i] = int.Parse(Console.ReadLine());
+        }
+
+        // Create an instance of the Zeros class
+        Zeros zerosHandler = new Zeros();
+
+        // Move zeros to the end
+        zerosHandler.MoveZerosToEnd(arr);
+
+        // Display the result
+        Console.WriteLine("Array after moving zeros to the end:");
+        zerosHandler.DisplayArray(arr);
+    }
+}
+
+
+
+
+
+//using System;
+
+//class Program
+//{
+//    static void Main()
+//    {
+//        // Input the number of elements to be stored in the array
+//        Console.Write("Input the number of elements to be stored in the array: ");
+//        int n = int.Parse(Console.ReadLine());
+
+//        int[] numbers = new int[n];
+//        Console.WriteLine($"Input {n} elements in the array:");
+
+//        // Read the array elements
+//        for (int i = 0; i < n; i++)
+//        {
+//            Console.Write($"element - {i} : ");
+//            numbers[i] = int.Parse(Console.ReadLine());
+//        }
+
+//        // Use the EvenOdd class
+//        EvenOdd evenOdd = new EvenOdd();
+//        int[][] jaggedArray = evenOdd.SeparateOddEven(numbers);
+
+//        // Display the results
+//        evenOdd.DisplayResults(jaggedArray);
+//    }
+//}
+
