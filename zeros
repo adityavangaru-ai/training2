@@ -1,0 +1,33 @@
+using System;
+
+public class Zeros
+{
+    // Method to move zeros to the end
+    public void MoveZerosToEnd(int[] arr)
+    {
+        int n = arr.Length;
+        int index = 0; // Pointer for the position of non-zero elements
+
+        // Move all non-zero elements to the front
+        for (int i = 0; i < n; i++)
+        {
+            if (arr[i] != 0)
+            {
+                arr[index++] = arr[i];
+            }
+        }
+
+        // Fill the remaining positions with zeros
+        while (index < n)
+        {
+            arr[index++] = 0;
+        }
+    }
+
+    // Method to display the array
+    public void DisplayArray(int[] arr)
+    {
+        Console.WriteLine(string.Join(", ", arr));
+    }
+}
+
